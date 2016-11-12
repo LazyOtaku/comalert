@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/images.jpe"/>
+
+<link rel="stylesheet" type="text/css" href="CSS/style1.css">
+<link rel="stylesheet" type="text/css" href="CSS/style_marvel.css">
+<link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<!-- script for displaying the username and comment boxes and save button when addcomment is clicked plus displaying the final comment upon saving -->
+<script>
+		function add()//when addcomment button is clicked, create textareas
+        {
+            var maindiv=document.createElement("div");
+            
+            var coll=document.createElement("input");
+            coll.setAttribute("type","text");
+            coll.setAttribute("class","userdude");
+            coll.setAttribute("placeholder","enter your user name");
+            //document.write("<br>");
+            
+            var collContent=document.createElement("textarea");
+            collContent.setAttribute("placeholder","Your comment");
+            collContent.setAttribute("class","comments");
+            //document.write("<br>");
+            
+            var savebtn=document.createElement("input");
+            savebtn.setAttribute("type","button");
+            savebtn.setAttribute("id","btnsave");
+            savebtn.setAttribute("value","Save");
+            savebtn.setAttribute("onClick","savefn(this.id)");
+            
+            
+            maindiv.appendChild(coll);
+            maindiv.appendChild(collContent);
+            maindiv.appendChild(savebtn);
+            
+            var a=document.getElementById("news3");
+            
+            a.appendChild(maindiv);
+            scrollBy(0,500);
+        }
+        
+        function savefn(x)
+        {
+            var btn=document.getElementById(x);
+            /*btn.parentNOde.Children[0] this will give you array of the parent which is main div and children text, and stuff*/
+            /*alert(btn.parentNode.children[0].value);*/
+            var name=btn.parentNode.children[0].value;
+            var fb=btn.parentNode.children[1].value;
+            fbdiv=btn.parentNode;
+            while(fbdiv.firstChild)
+                {
+                    fbdiv.removeChild(btn.parentNode.firstChild); //removes all the elements after you remove one the next child becomes zero as in it goes through all the children. Gaurantees by self checking
+                }
+            /* if you use
+            var x=maindiv.Children
+            for(var i=0;i<x.length;i++)
+            {
+            maindiv.removeChild(x[i]);
+            }*/
+            var div1=document.createElement("div")
+            div1.setAttribute("class","userdude")
+            div1.textContent=name;
+            
+            var div2=document.createElement("div")
+            div2.setAttribute("class","comments")
+            div2.textContent=fb;
+            
+            fbdiv.appendChild(div1);
+            fbdiv.appendChild(div2);
+        }
+</script>
+</head>
+
+<body>
+	<!-- header starts -->
+	<div id="heade">
+		<div id="fixedmenu">
+			<table>
+				<tr>
+					<td><a href="home.php">Home</a></td>
+					<td><a href="comalert_anime.html">Anime</a></td>
+					<td><a href="comalert_dc.html">DC</a></td>
+					<td><a href="comalert_manga.html">Manga</a></td>
+					<td><a href="comalert_marvel.html">
+						<div class="dropdown">Marvel<div class="downmenu">
+								<a href="#aug">August</a>
+								<br>
+								<a href="#july">July</a>
+								</div>
+							</div>
+					</a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="headingname" style="font-family: 'Holtwood One SC', serif;">MARVEL</div>
+	</div>
+	<!-- header ends -->
+
+	<!-- aug articles starts -->
+	<div id="aug" class="news">AUGUST</div>
+	<div style="margin-left: 30px;">
+		<a href="#aug_art_0"><img src="CSS/images/captainamericagif0.gif" class="gifs" src="" width="170" height="120"></a>
+		<a href="#aug_art_1"><img src="CSS/images/spiderman.gif" class="gifs" src="" width="170" height="120"></a>
+
+	</div>
+	<!-- august article 1 -->
+	<div id= "aug_art_0" class="news">
+		<h2>Hail Hydra?</h2>There are massive spoilers ahead for Captain America: Steve Rogers #2. If you somehow managed to miss the twist from the first issue, we’re gonna talk about that at length in today’s COm!ALert. You’ve been warned!<br>
+		Last month, Marvel released the first issue of a new Captain America series that put Steve Rogersback in the title role with a new costume. But it was Cap’s new motivation that really drew the anger of comic book fans when he seemingly murdered his sidekick, Jack Flag and uttered the following two words: “Hail Hydra.”<br>
+		At the time, Marvel played off the twist as if Cap had been a Hydra sleeper agent since he was a child. While the flashbacks in the first issue supported that interpretation, Marvel editor-in-chiefAxel Alonso has revealed the truth about the twist in a new interview with Comic Book. It turns out that Cap isn’t a Hydra agent; he only thinks he is because his memories have been tampered with by Kobik, the sentient Cosmic Cube that turned into a little girl during the Avengers: Standoffcrossover—a theory that we touched upon in a recent episode of Nerdist News. And of course, it was at the behest of Cap’s mortal enemy, the Red Skull.<br>
+		<!--<img id="hail" src="download.jpg">-->
+		<div id="aug_art_0_pic"></div>
+		“Captain America, one of the most trusted superheroes in the Marvel universe, is not exactly who you think he is,” explained Alonso. “He is operating with a different and sinister intent now and every interaction that we see from here on in will be shaded by that. That’s a story that Nick [Spencer] wanted to tell, and that’s a story that’s going to be fascinating for the next two months and a story that’s going to build to big, big things within the Marvel universe as well.”<br>
+		Of course, by revealing that Cap is under the influence of an enemy, it gives Marvel the natural way to reverse the changes to Steve Rogers’ character down the line. But it remains to be seen if some aspects stay with Cap, including the apparent murder of Jack Flag.<br>
+		<div id="links">
+		<a style="color:red;" href="http://marvel.com/comics/issue/57866/captain_america_steve_rogers_2016_2" target="_blank">Click to buy an issue</a> <br>
+		</div>
+	</div>
+	<!-- august article 2 -->
+	<div id= "aug_art_1" class="news">
+		<h2>Spiderman Homecoming(Spoiler Alerts!)</h2>As Marvel Studios News points out, the Porsche building served as the new Avengers headquarters in Captain America: Civil War. Add this with the “A team” comment, and it definitely seems like Spidey might have a chat with some fellow Avengers members.
+Earlier this week Robert Downey Jr. shared a photo of himself and his Marvel crew having lunch at The Optimist in Atlanta, GA. The actor is in the area to film his Spider-Man: Homecoming cameo, so a trip to the Avengers HQ in seems very possible.<br>
+		<!--<img id="hail" src="download.jpg"> -->
+		<div id="aug_art_1_pic"></div>
+		Also Back in March we learned that singer/actress Zendaya landed a lead role inSpider-Man: Homecoming, and now we know exactly who she’s playing. It’s a big one!
+Zendaya will be playing long-time Spider-Man love interest Mary Jane Watson in next summer’s Spider-Man: Homecoming, according to multiple sources atTheWrap.<br>
+What do you think of Zendaya playing Mary Jane Watson? <br>
+What do you guys think about Spidey visiting Avengers HQ? Who do you think he’ll be chatting with, and will he become a full on member of the team? Sound off in the comments below.<br>
+		<div id="links">
+<a style="color:red;" href="https://www.instagram.com/p/BKYu63mDVZL/" target="_blank">Tom Hollands Instagram</a> <br>
+<a style="color:red;" href="http://spidermannews.com/2016/08/24/stan-lee-zendaya-mary-jane-spider-man-homecoming/" target="_blank">See What Stan Lee Has To Say About Zendaya's Role</a></div>
+</div>
+	</div>
+
+	<br>
+
+
+
+<!-- aug articles ends -->
+    
+<!-- july articles start here -->
+    
+    
+    <div id="july" class="news">JULY</div>
+	<div style="margin-left: 30px;">
+		<a href="#jul_art_0"><img src="CSS/images/tumblr_o59cw02ceg1rpd22bo1_500.gif" class="gifs" src="" width="170" height="120"></a>
+		<a href="#jul_art_1"><img src="CSS/images/PJtQ9bm.gif" class="gifs" src="" width="170" height="120"></a>
+		
+	</div>
+	<!-- july article 1 -->
+	<div id= "jul_art_0" class="news">
+		<h2>Dr. Strange:Avengers Shoutout</h2>It's "Inception" meets "Harry Potter" in Marvel's new trailer for "Doctor Strange."<br>
+        The 60-second tease is packed with all-sorts of mystical action and magical powers, as Benedict Cumberbatch goes from a cocky, arrogant surgeon who James Bonds around New York in fancy everything, to a mystical-powered hero with really awesome facial hair. He and Tony Stark are gonna be BFFs.<br>
+        In fact, Stark and the rest of The Avengers get name-dropped here, as Benedict Wong's character, Wong, lays out what The Ancient One and her disciples of Kamar-Taj are doing when Earth Mightiest Heroes are battling the likes of Ultron. Then lots of magic whips and origami with cities ensues.<br>
+        November 4 can't get here fast enough.
+        <br>
+		<!--<img id="hail" src="download.jpg"> -->
+		<div id="jul_art_0_pic"></div>
+		Dr. Stephen Vincent Strange, also known as Doctor Strange, is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist and character conceptualist Steve Ditko, the character first appeared in Strange Tales #110 (cover-dated July 1963). A former neurosurgeon, Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. Debuting in the Silver Age of comics, the character has been featured in several comic book series and adapted in a variety of media including video games, an animated television show, and films. Inspired by storytellings of black magic and Chandu the Magician, Strange was created to bring a different kind of character and themes of mysticism to Marvel Comics.<br>
+<div id="links">
+<a style="color:red;" href="http://marvel.com/movies/movie/220/doctor_strange" target="_blank">Read More About This</a> <br>
+<a style="color:red;" href="https://www.youtube.com/watch?v=HSzx-zryEgM" target="_blank">The AMAZING trailer</a></div>
+</div>
+	</div>
+
+	<br>
+
+</body>
