@@ -1,0 +1,111 @@
+<html>
+<!-- yolo yolo ur boi-->
+<head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#console {
+  font-family: Courier;
+  background-color: #000000; 
+  color: #00E500;
+  display:block; 
+  float:left;
+  width: 100vw;
+  height: 100vh;
+}</style>
+</head>
+<body>
+<div id="console" contenteditable="true">
+ hello i'm your comic bot<br> let's talk .<br> type help  for more <br><br><br> > 	</div>
+<script src="jquery.min.js"></script>
+<script src="keypress.js"></script>
+<script>
+if (typeof console  != "undefined") 
+    if (typeof console.log != 'undefined')
+        console.olog = console.log;
+    else
+        console.olog = function() {};
+
+var result = $('#console');
+
+console.log = function(message) {
+    console.olog(message);
+    $('#console').append('<br>' + message + '\n>&nbsp;');
+      
+result.focus();
+    placeCaretAtEnd( document.getElementById("console") );
+};
+console.error = console.debug = console.info =  console.log
+
+function placeCaretAtEnd(el) {
+    el.focus();
+    if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else if (typeof document.body.createTextRange != "undefined") {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.collapse(false);
+        textRange.select();
+    }
+}
+
+
+var listener = new window.keypress.Listener();
+listener.sequence_combo("h e l p enter", function() {
+  console.log("Available commands: home,comics,anime");
+ 
+});
+
+var listener = new window.keypress.Listener();
+listener.sequence_combo("t a x i enter", function() {
+  console.log("where do u wanna go ");
+ 
+});
+listener.sequence_combo("h o m e enter", function() {
+  console.log("Available commands: home,comics,anime");
+  window.open("comealert_home.html","_self");// give ur html path instead of google.com
+});
+listener.sequence_combo("c o m i c s enter", function() {
+console.log("Available commands: home,comics,anime");
+  window.open("comalert_marvel.html","_self");
+});
+listener.sequence_combo("a n i m e enter", function() {
+console.log("Available commands: home,comics,anime");
+    window.open("something.html","_self")// give ur html path instead of google.com
+});
+
+
+listener.sequence_combo("y o l o enter", function() {
+console.log("Available commands: home,comics,anime");
+  console.log("OH MY GOD, YOU DID IT! much sweg so cool wuw");
+});
+listener.sequence_combo("h a w enter", function() {
+  console.log("haw haw haw hawwww");
+  console.log("Available commands: home,comics,anime");
+});
+
+listener.sequence_combo("h i enter", function() {
+  console.log("hey bro waddup?");
+  console.log("Available commands: home,comics,anime");
+});
+listener.sequence_combo("n m enter", function() {
+  console.log("k bye");
+  console.log("Available commands: home,comics,anime");
+});
+
+
+
+
+
+</script>
+</body>
+</html>
